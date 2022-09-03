@@ -10,7 +10,12 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
-  // ваш код...
+  if(name === null || /\s/.test(name))
+  {
+    return false;
+  }
+
+  return /[A-Za-z0-9_]{4}/.test(name);
 }
 
 function sayHello() {
